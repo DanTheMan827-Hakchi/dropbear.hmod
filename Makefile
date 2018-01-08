@@ -4,7 +4,6 @@ all: out/dropbear-$(GIT_COMMIT).hmod
 
 out/dropbear-$(GIT_COMMIT).hmod: mod/bin/dropbear
 	mkdir -p "out"
-	chmod +x mod/etc/init.d/*
 	tar -czvf "$@" -C "mod" "bin" "etc"
 	touch "$@"
 
